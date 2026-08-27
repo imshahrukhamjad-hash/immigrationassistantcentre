@@ -1186,15 +1186,23 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
   .offices-section { padding: 64px 0 72px; }
   .offices-heading h2 { font-size: 2.2rem; }
   .offices-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-layout { grid-template-columns: repeat(2, 1fr); gap: 35px; }
-  .footer-brand { grid-column: 1 / -1; }
+  .site-footer { text-align: center; }
+  .footer-layout { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .footer-brand { grid-column: auto; text-align: center; }
+  .footer-brand img { margin: 0 auto 14px; }
+  .footer-brand strong { margin: 0 auto; }
+  .footer-social { justify-content: center; }
+  .footer-bottom { text-align: center; }
 }
 
 @media (max-width: 520px) {
   .offices-heading h2 { font-size: 1.85rem; }
   .offices-grid { grid-template-columns: 1fr; }
-  .footer-layout { grid-template-columns: 1fr; gap: 28px; }
-  .footer-brand { grid-column: auto; }
+  .footer-layout { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .footer-brand { grid-column: auto; text-align: center; }
+  .footer-brand img { margin: 0 auto 14px; }
+  .footer-brand strong { margin: 0 auto; }
+  .footer-social { justify-content: center; }
   .floating-actions { right: 16px; bottom: 16px; gap: 9px; }
   .whatsapp-float, .back-to-top { width: 44px; height: 44px; }
 }
