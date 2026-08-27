@@ -161,6 +161,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 /* Hero Section */
 .hero { 
   position: relative; 
+  overflow: hidden;
   height: 80vh; 
   background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=85');
   background-size: cover; 
@@ -577,10 +578,12 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .journey-section {
   padding: 90px 0;
   background-color: #f5f8fb;
+  position: relative;
+  overflow: hidden;
 }
 .journey-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
   align-items: center;
   gap: 80px;
 }
@@ -663,13 +666,18 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .trust-badge strong { color: var(--accent-gold); font-size: 2rem; line-height: 1; }
 .trust-badge span { font-size: 0.8rem; line-height: 1.35; }
 
+@media (max-width: 992px) {
+  .journey-layout { grid-template-columns: 1fr; gap: 48px; }
+  .journey-visual::before { right: 0; }
+  .trust-badge { right: 10px; bottom: 18px; }
+}
+
 @media (max-width: 768px) {
   .why-choose-us { padding: 52px 0; }
   .section-heading h2 { font-size: 2rem; }
   .section-heading p br { display: none; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .journey-section { padding: 64px 0; }
-  .journey-layout { grid-template-columns: 1fr; gap: 48px; }
   .journey-content h2 { font-size: 2.2rem; }
   .journey-visual { min-height: 390px; }
   .journey-visual img { height: 390px; }
@@ -682,7 +690,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
   .journey-content h2 { font-size: 1.85rem; }
   .journey-visual { min-height: 300px; }
   .journey-visual img { height: 300px; }
-  .trust-badge { right: 12px; bottom: 18px; padding: 14px 16px; }
+  .trust-badge { right: 10px; bottom: 18px; padding: 14px 16px; }
 }
 
 /* Application Roadmap */
@@ -745,6 +753,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
+  overflow: hidden;
 }
 .roadmap-card {
   position: relative;
@@ -816,6 +825,8 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
   padding: 88px 0 100px;
   background-color: #fff;
   color: var(--primary-teal);
+  position: relative;
+  overflow: hidden;
 }
 .reviews-heading { text-align: center; margin-bottom: 42px; }
 .reviews-heading h2 {
@@ -828,7 +839,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
   color: #7186a1;
   font-size: 0.95rem;
 }
-.reviews-stage { position: relative; max-width: 1120px; margin: 0 auto; padding: 26px 0 42px; }
+.reviews-stage { position: relative; max-width: 1120px; margin: 0 auto; padding: 26px 0 42px; overflow: hidden; }
 .reviews-stage::before, .reviews-stage::after {
   content: "";
   position: absolute;
