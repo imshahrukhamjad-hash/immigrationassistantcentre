@@ -34,6 +34,34 @@ if (hero && slides.length) {
 window.addEventListener('scroll', updateNavbar, { passive: true });
 updateNavbar();
 
+// Mobile Navigation Hamburger Toggle
+const navToggle = document.querySelector('#nav-toggle');
+const navMenu = document.querySelector('#nav-menu');
+const navOverlay = document.querySelector('#nav-overlay');
+
+if (navToggle && navMenu) {
+  function toggleMobileMenu() {
+    const isActive = navToggle.classList.toggle('active');
+    navMenu.classList.toggle('active', isActive);
+    if (navOverlay) navOverlay.classList.toggle('active', isActive);
+    document.body.style.overflow = isActive ? 'hidden' : '';
+  }
+
+  function closeMobileMenu() {
+    navToggle.classList.remove('active');
+    navMenu.classList.remove('active');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  navToggle.addEventListener('click', toggleMobileMenu);
+  if (navOverlay) navOverlay.addEventListener('click', closeMobileMenu);
+
+  document.querySelectorAll('#nav-menu a').forEach((link) => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+}
+
 const reviewsViewport = document.querySelector('.reviews-grid');
 const reviewsTrack = document.querySelector('.reviews-track');
 const reviewCards = document.querySelectorAll('.review-card');
@@ -94,7 +122,7 @@ if (applicationForm && successModal) {
 }
 
 const revealSections = document.querySelectorAll('main section');
-const staggerGroups = document.querySelectorAll('.feature-grid, .roadmap-track, .offices-grid, .team-grid, .visa-grid');
+const staggerGroups = document.querySelectorAll('.stats-counter-grid, .feature-grid, .roadmap-track, .offices-grid, .team-grid, .visa-grid');
 const whyChooseCards = document.querySelectorAll('.why-choose-us .feature-card');
 const teamCards = document.querySelectorAll('.team-members .team-card');
 
@@ -157,3 +185,55 @@ if (backToTop) {
   }, { passive: true });
   backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
+
+// Animated Number Counter for Stats Section
+function animateCounters() {
+  const statNumbers = document.querySelectorAll('.stats-counter-section .stat-number');
+  if (!statNumbers.length) return;
+
+  function startCounting(el) {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    if (isNaN(target)) return;
+
+    let current = 0;
+    const duration = 1800; // 1.8 seconds
+    const frameRate = 60;
+    const totalFrames = Math.round((duration / 1000) * frameRate);
+    const increment = target / totalFrames;
+    let frame = 0;
+
+    const counterInterval = setInterval(() => {
+      frame++;
+      current += increment;
+      if (frame >= totalFrames) {
+        el.textContent = target + suffix;
+        clearInterval(counterInterval);
+      } else {
+        el.textContent = Math.floor(current) + suffix;
+      }
+    }, 1000 / frameRate);
+  }
+
+  if ('IntersectionObserver' in window) {
+    let hasRun = false;
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasRun) {
+          hasRun = true;
+          statNumbers.forEach((el) => startCounting(el));
+          counterObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const statsSection = document.querySelector('.stats-counter-section');
+    if (statsSection) {
+      counterObserver.observe(statsSection);
+    }
+  } else {
+    statNumbers.forEach((el) => startCounting(el));
+  }
+}
+
+animateCounters();

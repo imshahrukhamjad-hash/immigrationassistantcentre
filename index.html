@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,275 +12,432 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <span><i class="fas fa-map-marker-alt"></i> 1180 N Town Center Dr Ste 100, Las Vegas, NV 89144, USA</span>
-                <a href="tel:+18578404576"><i class="fas fa-phone-alt"></i> +1 857 840 4576</a>
-                <span><i class="fas fa-envelope"></i> info@immigrationassistantcenter.us</span>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-map-marker-alt"></i> 1180 N Town Center Dr Ste 100, Las Vegas, NV 89144,
+                        USA</span>
+                    <a href="tel:+18578404576"><i class="fas fa-phone-alt"></i> +1 857 840 4576</a>
+                    <span><i class="fas fa-envelope"></i> info@immigrationassistantcenter.us</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
-    </div>
 
-</header>
+    </header>
 
-<!-- Main Navigation -->
+    <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="container">
-            <div class="logo">
+            <a class="logo" href="index.html">
                 <img src="logo.png" alt="IAC Logo">
                 <span>IAC - Immigration Assistant Centre</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
+            </a>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only-action">
+                    <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
+                </li>
             </ul>
             <div class="nav-actions">
                 <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
+            <div class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
-<main class="home-main">
-<!-- Hero Section (Carousel/Single Slide) -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-content active" data-image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=85">
-            <h1>Your Gateway to Global Opportunities.</h1>
-            <p class="subtitle">A Premier Immigration Assistant Centre providing expert guidance Worldwide.</p>
-            <p>We offer personalized services for visa applications, documentation, and resettlement, making your international transition seamless and efficient.</p>
-            <a href="about.html" class="btn btn-secondary">Learn More</a>
-        </div>
-        <div class="hero-content" data-image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=85">
-            <h1>Expert Advice for Every Step.</h1>
-            <p class="subtitle">Professional consultation built around your international goals.</p>
-            <p>From your first question to your final application, our experienced team helps you move forward with clarity and confidence.</p>
-            <a href="services.html" class="btn btn-secondary">Explore Services</a>
-        </div>
-        <div class="hero-content" data-image="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=2000&q=85">
-            <h1>Plan Your Future Abroad.</h1>
-            <p class="subtitle">Clear, practical support for your next chapter.</p>
-            <p>We simplify documentation, visa planning, and relocation so you can focus on the opportunities waiting ahead.</p>
-            <a href="contact.html" class="btn btn-secondary">Start Planning</a>
-        </div>
-        <div class="hero-content" data-image="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2000&q=85">
-            <h1>Make Your Move With Confidence.</h1>
-            <p class="subtitle">A trusted partner for your global journey.</p>
-            <p>Receive personalized guidance and dependable support designed to make your transition smooth from application to arrival.</p>
-            <a href="team.html" class="btn btn-secondary">Meet Our Team</a>
-        </div>
-    </div>
-</section>
-
-<section class="why-choose-us">
-    <div class="container">
-        <div class="section-heading">
-            <span class="section-eyebrow"><span></span> WHY CHOOSE US <span></span></span>
-            <h2>Trusted Guidance For Your<br>Global Journey</h2>
-            <p>At IAC, we provide clear and personalized immigration guidance to help you reach your goals abroad.<br> From visa applications to relocation support, our experienced team is with you at every step.</p>
-        </div>
-        <div class="feature-grid">
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
-                <h3>Cost-Effective</h3>
-                <p>Transparent and affordable consultancy services designed around your immigration needs.</p>
-                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </article>
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fas fa-id-card"></i></div>
-                <h3>Visa Assistance</h3>
-                <p>Get expert support with visa selection, documentation, applications, and submission.</p>
-                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </article>
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fas fa-passport"></i></div>
-                <h3>Faster Processing</h3>
-                <p>We help you prepare accurate documents and avoid delays throughout your application.</p>
-                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </article>
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fas fa-users"></i></div>
-                <h3>Direct Interviews</h3>
-                <p>Prepare with confidence through practical interview guidance and one-to-one consultations.</p>
-                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </article>
-        </div>
-        <a href="#" class="more-features">Explore Our Services</a>
-    </div>
-</section>
-
-<section class="journey-section">
-    <div class="container journey-layout">
-        <div class="journey-content">
-            <span class="section-eyebrow"><span></span> YOUR JOURNEY <span></span></span>
-            <h2>From First Consultation<br>To New Beginnings</h2>
-            <p class="journey-intro">Moving abroad is a major decision. Our team makes the process easier with practical advice, accurate documentation, and personal support at every stage.</p>
-            <div class="journey-steps">
-                <div class="journey-step">
-                    <span class="step-number">01</span>
-                    <div><h3>Understand Your Goals</h3><p>We listen to your plans and recommend the right pathway for your future.</p></div>
+    <main class="home-main">
+        <!-- Hero Section (Carousel/Single Slide) -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content active"
+                    data-image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=85">
+                    <h1>Your Gateway to Global Opportunities.</h1>
+                    <p class="subtitle">A Premier Immigration Assistant Centre providing expert guidance Worldwide.</p>
+                    <p>We offer personalized services for visa applications, documentation, and resettlement, making
+                        your international transition seamless and efficient.</p>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
                 </div>
-                <div class="journey-step">
-                    <span class="step-number">02</span>
-                    <div><h3>Prepare With Confidence</h3><p>Get clear guidance on documents, applications, and every important requirement.</p></div>
+                <div class="hero-content"
+                    data-image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=85">
+                    <h1>Expert Advice for Every Step.</h1>
+                    <p class="subtitle">Professional consultation built around your international goals.</p>
+                    <p>From your first question to your final application, our experienced team helps you move forward
+                        with clarity and confidence.</p>
+                    <a href="services.html" class="btn btn-secondary">Explore Services</a>
                 </div>
-                <div class="journey-step">
-                    <span class="step-number">03</span>
-                    <div><h3>Move Forward</h3><p>Stay supported with updates and advice until you are ready for your next chapter.</p></div>
+                <div class="hero-content"
+                    data-image="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=2000&q=85">
+                    <h1>Plan Your Future Abroad.</h1>
+                    <p class="subtitle">Clear, practical support for your next chapter.</p>
+                    <p>We simplify documentation, visa planning, and relocation so you can focus on the opportunities
+                        waiting ahead.</p>
+                    <a href="contact.html" class="btn btn-secondary">Start Planning</a>
+                </div>
+                <div class="hero-content"
+                    data-image="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2000&q=85">
+                    <h1>Make Your Move With Confidence.</h1>
+                    <p class="subtitle">A trusted partner for your global journey.</p>
+                    <p>Receive personalized guidance and dependable support designed to make your transition smooth from
+                        application to arrival.</p>
+                    <a href="team.html" class="btn btn-secondary">Meet Our Team</a>
                 </div>
             </div>
-            <a href="#" class="btn btn-primary journey-button">Book A Consultation</a>
-        </div>
-        <div class="journey-visual">
-            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1100&q=85" alt="Consultants discussing an immigration plan">
-            <div class="trust-badge"><strong>10+</strong><span>Years of<br>trusted guidance</span></div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="roadmap-section">
-    <div class="container">
-        <div class="roadmap-header">
-            <div>
-                <span class="roadmap-label">A CLEARER WAY FORWARD</span>
-                <h2>Your Application,<br>Clearly Mapped</h2>
-            </div>
-            <p>Good preparation turns a complex move into a confident decision. IAC keeps your application organized, understandable, and moving in the right direction.</p>
-        </div>
-        <div class="roadmap-track">
-            <article class="roadmap-card">
-                <div class="roadmap-icon"><i class="fas fa-comments"></i></div>
-                <span class="roadmap-index">01</span>
-                <h3>Share Your Plans</h3>
-                <p>Tell us where you want to go, what you want to achieve, and when you want to begin.</p>
-            </article>
-            <article class="roadmap-card">
-                <div class="roadmap-icon"><i class="fas fa-route"></i></div>
-                <span class="roadmap-index">02</span>
-                <h3>Choose Your Path</h3>
-                <p>We explain suitable visa options and help you select a route that fits your profile.</p>
-            </article>
-            <article class="roadmap-card">
-                <div class="roadmap-icon"><i class="fas fa-folder-open"></i></div>
-                <span class="roadmap-index">03</span>
-                <h3>Build Your File</h3>
-                <p>Prepare a complete, carefully reviewed application with guidance from our consultants.</p>
-            </article>
-            <article class="roadmap-card">
-                <div class="roadmap-icon"><i class="fas fa-plane-departure"></i></div>
-                <span class="roadmap-index">04</span>
-                <h3>Take The Next Step</h3>
-                <p>Stay informed through the process and get ready for your new life abroad.</p>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section class="reviews-section">
-    <div class="container">
-        <div class="reviews-heading">
-            <span class="section-eyebrow"><span></span> OUR CLIENT REVIEWS <span></span></span>
-            <h2>Real Journeys.<br>Real Confidence.</h2>
-            <p>Every successful application begins with trust, clarity, and the right support.</p>
-        </div>
-            <div class="reviews-stage">
-                <div class="reviews-grid">
-                    <div class="reviews-track">
-            <article class="review-card">
-                <div class="review-top"><span class="quote-mark">“</span><span class="rating">★★★★★</span></div>
-                <p class="review-text">IAC made the visa process feel simple and manageable. They explained every requirement clearly and kept me updated from start to finish.</p>
-                <div class="review-author"><img class="author-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily Carter"><div><strong>Emily Carter</strong><span>Student Visa Applicant</span></div></div>
-            </article>
-            <article class="review-card featured-review">
-                <div class="review-top"><span class="quote-mark">“</span><span class="rating">★★★★★</span></div>
-                <p class="review-text">The team understood my goals and helped me prepare a strong application. Their personal attention gave me confidence throughout the journey.</p>
-                <div class="review-author"><img class="author-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson"><div><strong>Michael Johnson</strong><span>Skilled Migration Client</span></div></div>
-            </article>
-            <article class="review-card">
-                <div class="review-top"><span class="quote-mark">“</span><span class="rating">★★★★★</span></div>
-                <p class="review-text">From document checking to interview preparation, I received honest advice at every step. I would happily recommend IAC to others.</p>
-                <div class="review-author"><img class="author-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Olivia Bennett"><div><strong>Olivia Bennett</strong><span>Family Visa Client</span></div></div>
-            </article>
-            <article class="review-card">
-                <div class="review-top"><span class="quote-mark">“</span><span class="rating">★★★★★</span></div>
-                <p class="review-text">I always knew what was happening with my application. The advice was clear, professional, and tailored to my family’s situation.</p>
-                <div class="review-author"><img class="author-avatar" src="https://randomuser.me/api/portraits/men/46.jpg" alt="Daniel Anderson"><div><strong>Daniel Anderson</strong><span>Family Relocation Client</span></div></div>
-            </article>
-            <article class="review-card">
-                <div class="review-top"><span class="quote-mark">“</span><span class="rating">★★★★★</span></div>
-                <p class="review-text">The consultants were patient, responsive, and thorough. Their guidance helped me submit my application with complete peace of mind.</p>
-                <div class="review-author"><img class="author-avatar" src="https://randomuser.me/api/portraits/women/33.jpg" alt="Sophia Williams"><div><strong>Sophia Williams</strong><span>Work Visa Applicant</span></div></div>
-            </article>
+        <!-- Stats Counter Section -->
+        <section class="stats-counter-section">
+            <div class="container">
+                <div class="stats-counter-grid">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-details">
+                            <span class="stat-number" data-target="30" data-suffix="+">0+</span>
+                            <span class="stat-label">Visa Categories</span>
+                        </div>
                     </div>
-                                </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-details">
+                            <span class="stat-number" data-target="68" data-suffix="k">0k</span>
+                            <span class="stat-label">Visa Process</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-details">
+                            <span class="stat-number" data-target="99" data-suffix="+">0+</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-details">
+                            <span class="stat-number" data-target="23" data-suffix="+">0+</span>
+                            <span class="stat-label">Pro Consultants</span>
+                        </div>
+                    </div>
                 </div>
-        <div class="review-controls">
-            <button class="review-control review-prev" type="button" aria-label="Previous review"><i class="fas fa-arrow-left"></i></button>
-            <button class="review-control review-next" type="button" aria-label="Next review"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-eyebrow"><span></span> WHY CHOOSE US <span></span></span>
+                    <h2>Trusted Guidance For Your<br>Global Journey</h2>
+                    <p>At IAC, we provide clear and personalized immigration guidance to help you reach your goals
+                        abroad.<br> From visa applications to relocation support, our experienced team is with you at
+                        every step.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h3>Cost-Effective</h3>
+                        <p>Transparent and affordable consultancy services designed around your immigration needs.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-id-card"></i></div>
+                        <h3>Visa Assistance</h3>
+                        <p>Get expert support with visa selection, documentation, applications, and submission.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-passport"></i></div>
+                        <h3>Faster Processing</h3>
+                        <p>We help you prepare accurate documents and avoid delays throughout your application.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <h3>Direct Interviews</h3>
+                        <p>Prepare with confidence through practical interview guidance and one-to-one consultations.
+                        </p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+                <a href="./services.html" class="more-features">Explore Our Services</a>
+            </div>
+        </section>
+
+        <section class="journey-section">
+            <div class="container journey-layout">
+                <div class="journey-content">
+                    <span class="section-eyebrow"><span></span> YOUR JOURNEY <span></span></span>
+                    <h2>From First Consultation<br>To New Beginnings</h2>
+                    <p class="journey-intro">Moving abroad is a major decision. Our team makes the process easier with
+                        practical advice, accurate documentation, and personal support at every stage.</p>
+                    <div class="journey-steps">
+                        <div class="journey-step">
+                            <span class="step-number">01</span>
+                            <div>
+                                <h3>Understand Your Goals</h3>
+                                <p>We listen to your plans and recommend the right pathway for your future.</p>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-number">02</span>
+                            <div>
+                                <h3>Prepare With Confidence</h3>
+                                <p>Get clear guidance on documents, applications, and every important requirement.</p>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <span class="step-number">03</span>
+                            <div>
+                                <h3>Move Forward</h3>
+                                <p>Stay supported with updates and advice until you are ready for your next chapter.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary journey-button">Book A Consultation</a>
+                </div>
+                <div class="journey-visual">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1100&q=85"
+                        alt="Consultants discussing an immigration plan">
+                    <div class="trust-badge"><strong>10+</strong><span>Years of<br>trusted guidance</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="roadmap-section">
+            <div class="roadmap-watermark"><i class="fas fa-plane-departure"></i></div>
+            <div class="container">
+                <div class="roadmap-header">
+                    <div>
+                        <span class="roadmap-label">A CLEARER WAY FORWARD</span>
+                        <h2>Your Application,<br>Clearly Mapped</h2>
+                    </div>
+                    <p>Good preparation turns a complex move into a confident decision. IAC keeps your application
+                        organized, understandable, and moving in the right direction.</p>
+                </div>
+                <div class="roadmap-track">
+                    <article class="roadmap-card">
+                        <div class="roadmap-icon"><i class="fas fa-comments"></i></div>
+                        <span class="roadmap-index">01</span>
+                        <h3>Share Your Plans</h3>
+                        <p>Tell us where you want to go, what you want to achieve, and when you want to begin.</p>
+                    </article>
+                    <article class="roadmap-card">
+                        <div class="roadmap-icon"><i class="fas fa-route"></i></div>
+                        <span class="roadmap-index">02</span>
+                        <h3>Choose Your Path</h3>
+                        <p>We explain suitable visa options and help you select a route that fits your profile.</p>
+                    </article>
+                    <article class="roadmap-card">
+                        <div class="roadmap-icon"><i class="fas fa-folder-open"></i></div>
+                        <span class="roadmap-index">03</span>
+                        <h3>Build Your File</h3>
+                        <p>Prepare a complete, carefully reviewed application with guidance from our consultants.</p>
+                    </article>
+                    <article class="roadmap-card">
+                        <div class="roadmap-icon"><i class="fas fa-plane-departure"></i></div>
+                        <span class="roadmap-index">04</span>
+                        <h3>Take The Next Step</h3>
+                        <p>Stay informed through the process and get ready for your new life abroad.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <div class="container">
+                <div class="reviews-heading">
+                    <span class="section-eyebrow"><span></span> OUR CLIENT REVIEWS <span></span></span>
+                    <h2>Real Journeys.<br>Real Confidence.</h2>
+                    <p>Every successful application begins with trust, clarity, and the right support.</p>
+                </div>
+                <div class="reviews-stage">
+                    <div class="reviews-grid">
+                        <div class="reviews-track">
+                            <article class="review-card">
+                                <div class="review-top"><span class="quote-mark">“</span><span
+                                        class="rating">★★★★★</span></div>
+                                <p class="review-text">IAC made the visa process feel simple and manageable. They
+                                    explained every requirement clearly and kept me updated from start to finish.</p>
+                                <div class="review-author"><img class="author-avatar"
+                                        src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily Carter">
+                                    <div><strong>Emily Carter</strong><span>Student Visa Applicant</span></div>
+                                </div>
+                            </article>
+                            <article class="review-card featured-review">
+                                <div class="review-top"><span class="quote-mark">“</span><span
+                                        class="rating">★★★★★</span></div>
+                                <p class="review-text">The team understood my goals and helped me prepare a strong
+                                    application. Their personal attention gave me confidence throughout the journey.</p>
+                                <div class="review-author"><img class="author-avatar"
+                                        src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson">
+                                    <div><strong>Michael Johnson</strong><span>Skilled Migration Client</span></div>
+                                </div>
+                            </article>
+                            <article class="review-card">
+                                <div class="review-top"><span class="quote-mark">“</span><span
+                                        class="rating">★★★★★</span></div>
+                                <p class="review-text">From document checking to interview preparation, I received
+                                    honest advice at every step. I would happily recommend IAC to others.</p>
+                                <div class="review-author"><img class="author-avatar"
+                                        src="https://randomuser.me/api/portraits/women/65.jpg" alt="Olivia Bennett">
+                                    <div><strong>Olivia Bennett</strong><span>Family Visa Client</span></div>
+                                </div>
+                            </article>
+                            <article class="review-card">
+                                <div class="review-top"><span class="quote-mark">“</span><span
+                                        class="rating">★★★★★</span></div>
+                                <p class="review-text">I always knew what was happening with my application. The advice
+                                    was clear, professional, and tailored to my family’s situation.</p>
+                                <div class="review-author"><img class="author-avatar"
+                                        src="https://randomuser.me/api/portraits/men/46.jpg" alt="Daniel Anderson">
+                                    <div><strong>Daniel Anderson</strong><span>Family Relocation Client</span></div>
+                                </div>
+                            </article>
+                            <article class="review-card">
+                                <div class="review-top"><span class="quote-mark">“</span><span
+                                        class="rating">★★★★★</span></div>
+                                <p class="review-text">The consultants were patient, responsive, and thorough. Their
+                                    guidance helped me submit my application with complete peace of mind.</p>
+                                <div class="review-author"><img class="author-avatar"
+                                        src="https://randomuser.me/api/portraits/women/33.jpg" alt="Sophia Williams">
+                                    <div><strong>Sophia Williams</strong><span>Work Visa Applicant</span></div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-controls">
+                    <button class="review-control review-prev" type="button" aria-label="Previous review"><i
+                            class="fas fa-arrow-left"></i></button>
+                    <button class="review-control review-next" type="button" aria-label="Next review"><i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container faq-layout">
+                <div class="faq-intro">
+                    <span class="section-eyebrow"><span></span> NEED TO KNOW <span></span></span>
+                    <h2>Questions,<br>Answered Clearly.</h2>
+                    <p>We know immigration can feel complicated. Here are answers to some of the questions our clients
+                        ask most often.</p>
+                    <a href="#" class="btn btn-primary">Talk To An Expert</a>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item is-open">
+                        <button class="faq-question" type="button" aria-expanded="true"><span>How do I know which visa
+                                is right for me?</span><i class="fas fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>We review your goals, qualifications, finances, and timeline before explaining the visa
+                                pathways that best match your situation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"><span>What documents will I
+                                need?</span><i class="fas fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Requirements vary by destination and visa type. Our consultants provide a personalized
+                                checklist and review your documents before submission.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"><span>How long does the
+                                application process take?</span><i class="fas fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Processing times depend on the visa category and destination. We help you plan
+                                realistically and keep you informed as your application progresses.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"><span>Can you help me prepare
+                                for an interview?</span><i class="fas fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes. We offer practical interview preparation so you can understand the process, organize
+                                your answers, and attend with confidence.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false"><span>How can I book an initial
+                                consultation?</span><i class="fas fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Use any consultation button on this page to contact our team. We will arrange a
+                                convenient time to discuss your plans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="floating-actions"><a class="whatsapp-float" href="https://wa.me/18578404576" target="_blank"
+                rel="noopener" aria-label="Chat with us on WhatsApp"><i class="fab fa-whatsapp"></i></a><button
+                class="back-to-top" type="button" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
         </div>
-    </div>
-</section>
+    </main>
 
-<section class="faq-section">
-    <div class="container faq-layout">
-        <div class="faq-intro">
-            <span class="section-eyebrow"><span></span> NEED TO KNOW <span></span></span>
-            <h2>Questions,<br>Answered Clearly.</h2>
-            <p>We know immigration can feel complicated. Here are answers to some of the questions our clients ask most often.</p>
-            <a href="#" class="btn btn-primary">Talk To An Expert</a>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item is-open">
-                <button class="faq-question" type="button" aria-expanded="true"><span>How do I know which visa is right for me?</span><i class="fas fa-plus"></i></button>
-                <div class="faq-answer"><p>We review your goals, qualifications, finances, and timeline before explaining the visa pathways that best match your situation.</p></div>
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <div class="footer-brand"><img src="logo.png" alt="IAC Logo"><strong>IAC - Immigration Assistant
+                    Centre</strong>
+                <p>Clear guidance for your global journey.</p>
             </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>What documents will I need?</span><i class="fas fa-plus"></i></button>
-                <div class="faq-answer"><p>Requirements vary by destination and visa type. Our consultants provide a personalized checklist and review your documents before submission.</p></div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3><a href="tel:+18578404576"><i class="fas fa-phone-alt"></i> +1 857 840 4576</a>
+                <address><i class="fas fa-map-marker-alt"></i> 1180 N Town Center Dr Ste 100,<br> Las Vegas, NV 89144,
+                    USA</address>
             </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>How long does the application process take?</span><i class="fas fa-plus"></i></button>
-                <div class="faq-answer"><p>Processing times depend on the visa category and destination. We help you plan realistically and keep you informed as your application progresses.</p></div>
+            <div class="footer-links">
+                <h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a
+                    href="#">Services</a><a href="#">Contact</a>
             </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>Can you help me prepare for an interview?</span><i class="fas fa-plus"></i></button>
-                <div class="faq-answer"><p>Yes. We offer practical interview preparation so you can understand the process, organize your answers, and attend with confidence.</p></div>
+            <div class="footer-services">
+                <h3>Our Services</h3><a href="#">Visa Assistance</a><a href="#">Document Review</a><a href="#">Interview
+                    Preparation</a><a href="#">Relocation Guidance</a>
             </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>How can I book an initial consultation?</span><i class="fas fa-plus"></i></button>
-                <div class="faq-answer"><p>Use any consultation button on this page to contact our team. We will arrange a convenient time to discuss your plans.</p></div>
+            <div class="footer-hours">
+                <h3>Office Hours</h3>
+                <p>Monday - Friday<br><strong>9:00 AM - 6:00 PM</strong></p>
+                <p>Saturday<br><strong>10:00 AM - 3:00 PM</strong></p>
+                <div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a
+                        href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="footer-bottom">
+            <div class="container">© 2026 IAC - Immigration Assistant Centre. All rights reserved.</div>
+        </div>
+    </footer>
 
-<div class="floating-actions"><a class="whatsapp-float" href="https://wa.me/18578404576" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><i class="fab fa-whatsapp"></i></a><button class="back-to-top" type="button" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button></div>
-</main>
-
-<footer class="site-footer">
-    <div class="container footer-layout">
-        <div class="footer-brand"><img src="logo.png" alt="IAC Logo"><strong>IAC - Immigration Assistant Centre</strong><p>Clear guidance for your global journey.</p></div>
-        <div class="footer-contact"><h3>Contact Us</h3><a href="tel:+18578404576"><i class="fas fa-phone-alt"></i> +1 857 840 4576</a><address><i class="fas fa-map-marker-alt"></i> 1180 N Town Center Dr Ste 100,<br> Las Vegas, NV 89144, USA</address></div>
-        <div class="footer-links"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="#">Services</a><a href="#">Contact</a></div>
-        <div class="footer-services"><h3>Our Services</h3><a href="#">Visa Assistance</a><a href="#">Document Review</a><a href="#">Interview Preparation</a><a href="#">Relocation Guidance</a></div>
-        <div class="footer-hours"><h3>Office Hours</h3><p>Monday - Friday<br><strong>9:00 AM - 6:00 PM</strong></p><p>Saturday<br><strong>10:00 AM - 3:00 PM</strong></p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div></div>
-    </div>
-    <div class="footer-bottom"><div class="container">© 2026 IAC - Immigration Assistant Centre. All rights reserved.</div></div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
