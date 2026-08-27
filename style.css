@@ -12,9 +12,9 @@
 /* Base Styles */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; overflow-x: clip; position: relative; }
+body { font-family: 'Inter', sans-serif; position: relative; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-.home-main, main, section { overflow-x: hidden; }
+
 .home-main .why-choose-us { order: 1; }
 .home-main .journey-section { order: 2; }
 .home-main .reviews-section { order: 3; }
